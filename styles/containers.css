@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4em;
+    background-color: rgb(236, 236, 236);
+    padding: 1.2em;
+    border-radius: 0.5em;
+}
+
+.container-angle-input, .container-side-input {
+    display: flex;
+    gap: 0.9em;
+    position: relative;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 2em;
+}
+
+.output-two {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.container-buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container-round {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.very-tuff-container {
+    flex-direction: row;
+}

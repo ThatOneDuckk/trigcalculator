@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#logo {
+    width: 5em;
+    height: 5em;
+    transition: 500ms;
+}
+
+#logo:hover {
+    width: 6em;
+    height: 6em;
+    transition: 500ms;
+}
+
+#logo:active {
+    width: 4.5em;
+    height: 4.5em;
+    transition: 500ms;
+}
+
+#title {
+    font-size: 2em;
+    margin: 0.5em;
+    font-family: "Quicksand", sans-serif;
+    transition: 500ms;
+    user-select: none;
+}
+
+#title:hover {
+    color: rgb(100, 100, 255);
+    transition: 500ms;
+    font-size: 2.3em;
+}
+
+#title:active {
+    color: rgb(80, 80, 255);
+    transition: 500ms;
+    font-size: 1.8em;
+}
+
+.input {
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    background-color: rgb(212, 212, 212);
+    padding: 0.3em 0.1em;
+    text-align: center;
+    color: gray;
+    font-family: "Montserrat", sans-serif;
+    transition: 250ms;
+    user-select: none;
+}
+
+.input:hover {
+    background-color: rgb(190, 190, 190);
+    padding: 0.3em 1em;
+}
+
+.input:active {
+    background-color: rgb(170, 170, 170);
+    padding: 0.3em 0.5em;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#calcbutton {
+    padding: 0.5em 5em;
+    border-radius: 1.25em;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(100, 100, 255);
+    color: white;
+    font-size: 0.9em;
+    transition: 500ms;
+    user-select: none;
+}
+
+#calcbutton:hover {
+    background-color: rgb(80, 80, 255);
+    cursor: pointer;
+    padding: 0.5em 7em;
+}
+
+#calcbutton:active {
+    background-color: rgb(60, 60, 255);
+    padding: 0.5em 4em;
+}
+
+#calcbutton:disabled {
+    background-color: rgb(150, 150, 255);
+    cursor: not-allowed;
+    padding: 0.5em 7em;
+}
+
+.output-item {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2em;
+    user-select: none;
+    transition: 300ms;
+    font-weight: 500;
+}
+
+.output-item:hover {
+    color: rgb(100, 100, 255);
+    transition: 100ms;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.output-item:active {
+    color: rgb(80, 80, 255);
+    transition: 100ms;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+#delete-button {
+    width: 2em;
+    height: 2em;
+    background: none;
+    border: none;
+    transition: 300ms;
+}
+
+#delete-button:hover {
+    width: 2.5em;
+    height: 2.5em;
+    transition: 150ms;
+}
+
+#delete-button:active {
+    width: 1.8em;
+    height: 1.8em;
+    transition: 75ms;
+}
+
+#delete {
+    width: 75%;
+    height: 75%
+}
+
+.button {
+    margin: 0em 3em;
+}
+
+#alert {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(100, 100, 255);
+    font-weight: 500;
+    font-size: 1em;
+    opacity: 0%;
+    transition: 100ms;
+}
+
+.show {
+    opacity: 1 !important;
+}
+
+.roundslider {
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0em 1em;
+    background-color: rgb(212, 212, 212);
+    border-radius: 10em;
+    cursor: pointer;
+    transition: 350ms;
+}
+
+.roundslider:focus {
+    outline: none;
+}
+
+.roundslider:hover {
+    padding: 0em 2em;
+    transition: 225ms;
+}
+
+.roundslider::-webkit-slider-thumb,
+.roundslider::-moz-range-thumb {
+    -webkit-appearance: none;
+    background-color: rgb(100, 100, 255);
+    border: none;
+    height: 100%;
+    width: 10%;
+    border-radius: 0.4em;
+}
+
+.very-tuff-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8em;
+    margin-right: 0.3em;
+    user-select: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2.2em;
+    height: 1.2em;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 400ms;
+    transition: 400ms;
+    border-radius: 1em;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 1em;
+    left: 0.1em;
+    bottom: 0.1em;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 1em;
+}
+
+
+input:checked + .slider {
+    background-color: rgb(100, 100, 255);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(100, 100, 255);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(1em);
+    -ms-transform: translateX(1em);
+    transform: translateX(1em);
+}
