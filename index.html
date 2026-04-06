@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/containers.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-main container">
+        <div class="title container">
+            <img src="assets/logo.png" alt="logo" id="logo">
+            <h1 id="title">Trigonometry Calculator</h1>
+        </div>
+        <div class="container-input container">
+            <div class="container-angle-input container">
+                <input type="number" class="angle-input input" id="angleA" placeholder="Angle A">
+                <input type="number" class="angle-input input" id="angleB" placeholder="Angle B">
+                <input type="number" class="angle-input input" id="angleC" placeholder="Angle C">
+            </div>
+            <div class="container-side-input container">
+                <input type="number" class="side-input input" id="sideA" placeholder="Side a">
+                <input type="number" class="side-input input" id="sideB" placeholder="Side b">
+                <input type="number" class="side-input input" id="sideC" placeholder="Side c">
+            </div>
+            <button id="calcbutton">Calculate</button>
+        </div>
+        <div class="output">
+            <div class="output-two">
+                <p id="output-angleA" class="output-item">s</p>
+                <p id="output-angleB" class="output-item"></p>
+                <p id="output-angleC" class="output-item"></p>
+            </div>
+            <div class="output-two">
+                <p id="output-sideA" class="output-item"></p>
+                <p id="output-sideB" class="output-item"></p>
+                <p id="output-sideC" class="output-item"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
