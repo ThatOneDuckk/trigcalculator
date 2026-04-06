@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trigonometry Calculator</title>
+    
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/containers.css">
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
@@ -30,11 +31,31 @@
                 <input type="number" class="side-input input" id="sideB" placeholder="Side b">
                 <input type="number" class="side-input input" id="sideC" placeholder="Side c">
             </div>
-            <button id="calcbutton">Calculate</button>
+            <div class="container-buttons container">
+                <button id="calcbutton" class="button">Calculate</button>
+                <div class="container-round container">
+                    <div class="very-tuff-container container">
+                        <label class="very-tuff-text">Round Angle</label>
+                        <input type="range" class="roundslider" id="roundtoangle" min="0" max="8" value="4">
+                    </div>
+                    <div class="very-tuff-container container">
+                        <label class="very-tuff-text">Round Side</label>
+                        <input type="range" class="roundslider" id="roundtoside" min="0" max="8" value="4">
+                    </div>
+                </div>
+                <button id="delete-button" class="button"><img src="assets/delete.png" alt="delete" id="delete"></button>
+            </div>
         </div>
         <div class="output">
+            <div style="display: flex;">
+                <p style="font-family: 'Montserrat', sans-serif; margin-right: 1em;" class="swaptri">Swap Triangles</p>
+                <label class="switch swaptri">
+                    <input type="checkbox" class="swaptri" id="swaptri">
+                    <span class="slider swaptri"></span>
+                </label>
+            </div>
             <div class="output-two">
-                <p id="output-angleA" class="output-item">s</p>
+                <p id="output-angleA" class="output-item"></p>
                 <p id="output-angleB" class="output-item"></p>
                 <p id="output-angleC" class="output-item"></p>
             </div>
@@ -43,9 +64,13 @@
                 <p id="output-sideB" class="output-item"></p>
                 <p id="output-sideC" class="output-item"></p>
             </div>
+            <p id="alert">Copied to Clipboard!</p>
         </div>
     </div>
 
-    <script src="src/main.js"></script>
+    <script src="src/main.js" type="module"></script>
+    <script src="src/righttrianglecalculations.js" type="module"></script>
+    <script src="src/delete-button.js"></script>
+    <script src="src/copytoclipboard.js"></script>
 </body>
 </html>
