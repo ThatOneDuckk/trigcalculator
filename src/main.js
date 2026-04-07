@@ -142,12 +142,15 @@ function calculate() {
     } else if (numberofSides === 3 || numberofSides >= 2 && numberofAngles >= 1) {
         output = lawOfCos(input);
     }
+
     document.getElementById("output-angleA").textContent = "m∠A = " + Math.round(output[0] * 10 ** document.getElementById("roundtoangle").value) / 10 ** document.getElementById("roundtoangle").value;
     document.getElementById("output-angleB").textContent = "m∠B = " + Math.round(output[1] * 10 ** document.getElementById("roundtoangle").value) / 10 ** document.getElementById("roundtoangle").value;
     document.getElementById("output-angleC").textContent = "m∠C = " + Math.round(output[2] * 10 ** document.getElementById("roundtoangle").value) / 10 ** document.getElementById("roundtoangle").value;
     document.getElementById("output-sideA").textContent = "a = " + Math.round(output[3] * 10 ** document.getElementById("roundtoside").value) / 10 ** document.getElementById("roundtoside").value;
     document.getElementById("output-sideB").textContent = "b = " + Math.round(output[4] * 10 ** document.getElementById("roundtoside").value) / 10 ** document.getElementById("roundtoside").value;
     document.getElementById("output-sideC").textContent = "c = " + Math.round(output[5] * 10 ** document.getElementById("roundtoside").value) / 10 ** document.getElementById("roundtoside").value;
+
+    
 
     if (output.length > 6) {
         for (let i = 0; i < swaptri.length; i++) {
@@ -186,3 +189,23 @@ function tick(currentTime) {
 requestAnimationFrame(tick);
 
 submitButton.addEventListener("click", () => inputValidCheck());
+
+// --- Dark Mode Logic ---
+const themeToggle = document.getElementById('theme-toggle');
+const htmlElement = document.documentElement;
+
+// Check for saved user preference
+const savedTheme = localStorage.getItem('theme') || 'light';
+htmlElement.setAttribute('data-theme', savedTheme);
+themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update Emoji
+    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+});
